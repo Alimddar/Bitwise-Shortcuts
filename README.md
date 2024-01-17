@@ -145,6 +145,17 @@ int numberOfSetBitsFromIToJ(int x, int i, int j) {
 int nextPowerOfTwo(int x) {
     return pow(2, ceil(log2(x)));
 }
+
+//count of the 1 bits in the binary representation of a number
+
+int countOfOneBits(int x) {
+    int count = 0;
+    while (x) {
+        x &= (x - 1);
+        count++;
+    }
+    return count;
+}
 ```
 
 
