@@ -156,6 +156,60 @@ int countOfOneBits(int x) {
     }
     return count;
 }
+
+//find the position of the rightmost set bit
+
+int positionOfRightmostSetBit(int x) {
+    return log2(x & -x) + 1;
+}
+
+//find the position of the leftmost set bit
+
+int positionOfLeftmostSetBit(int x) {
+    return floor(log2(x)) + 1;
+}
+
+//find the position of the rightmost unset bit
+
+int positionOfRightmostUnsetBit(int x) {
+    return log2(~x & (x + 1)) + 1;
+}
+
+//find the position of the leftmost unset bit
+
+int positionOfLeftmostUnsetBit(int x) {
+    return floor(log2(~x)) + 1;
+}
+
+//find the position of the rightmost set bit in the binary representation of a number
+
+int positionOfRightmostSetBitInBinaryRepresentation(int x) {
+    return log2(x & -x);
+}
+
+//find the position of the leftmost set bit in the binary representation of a number
+
+int positionOfLeftmostSetBitInBinaryRepresentation(int x) {
+    return floor(log2(x));
+}
+
+//find the position of the rightmost unset bit in the binary representation of a number
+
+int positionOfRightmostUnsetBitInBinaryRepresentation(int x) {
+    return log2(~x & (x + 1));
+}
+
+//find the position of the leftmost unset bit in the binary representation of a number
+
+int positionOfLeftmostUnsetBitInBinaryRepresentation(int x) {
+    return floor(log2(~x));
+}
+
+//find the position of the rightmost different bit in the binary representation of two numbers
+
+int positionOfRightmostDifferentBitInBinaryRepresentation(int x, int y) {
+    return log2((x ^ y) & -(x ^ y));
+}
 ```
 
 
